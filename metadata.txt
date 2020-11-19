@@ -6,9 +6,9 @@
 name=Diversity Calculator
 qgisMinimumVersion=3.0
 description=Calculates biodiversity indexes (Richness, Shannons, and Simpsons)
-version=0.1
+version=0.5
 author=Miller Mountain LLC
-email=mmllc@gmail.com
+email=lstomsl@gmail.com
 
 about=Given a set of areas (polygons) and a set of species observations (points), this plugin will calculate a set of common biodiversity indices.
 
@@ -25,7 +25,7 @@ hasProcessingProvider=no
 # Tags are comma separated with spaces allowed
 tags=analysis, calculator, ecology, landscape, statistics, vector, diversity, biodiversity
 
-homepage=http://millermountain.com/geospatialblog/
+homepage=http://korimageo.com/plugins/diversity_calc
 category=Vector
 icon=icon.png
 # experimental flag

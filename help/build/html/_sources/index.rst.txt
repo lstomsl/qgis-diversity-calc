@@ -6,11 +6,13 @@
 Welcome to DiversityCalculator!
 ===============================
 
+`Download documentation as ePub <http://korimageo.com/help/diversity_calc/DiversityCalc.epub>`_
+
 The goal of this plugin is to facilitate estimation of biodiversity given a set of polygons containing the areas that you want to estimate diversity for and a set of points where each point represents a single species observation.
 
 The polygon layer must have at least one string field that contains a category name.  This could be a unique identifier, in which case diversity indices will be calculated for each polygon.  Alternatively it could be a field used to classify the polygons into categories. For example you may have 30 polygons that are classified into three different elevational ranges, Low, Moderate, and High.  In this case the observations will be pooled over all the polygons with the same category and one set of diversity indices will be calculated for each unique category.
 
-The point layer must contain at least one string field holding the species name.  It is important that the spelling is correct or they will be considered 2 different species.  The number of observations for each species within a single category will be used to calculate the `diversity indexes <https://en.wikipedia.org/wiki/Diversity_index#:~:text=A%20diversity%20index%20(also%20called,individuals%20distributed%20among%20those%20types%2C>`_ .
+The point layer must contain at least one string field holding the species name.  It is important that the spelling is correct or they will be considered 2 different species.  The number of observations for each species within a single category will be used to calculate the `diversity indexes <https://en.wikipedia.org/wiki/Diversity_index>`_ .
 
 Diversity Indices
 =================
@@ -64,9 +66,31 @@ The Inverse Simpsons index is equal to 1 / D . It has a maximum value that is eq
 
 The Gini-Simpson index is equal to 1 - D . It can be interpreted as the probabiility that any two independent observations will be different species.
 
+Using the plugin
+================
 
+To use this plugin simply go to the QGIS plugin managerand install it on your system just like any other QGIS plugin.  You will see a toolbutton in the plugins toolbar with the following image.
 
+.. image:: images/icon.png
 
+After clicking this toolbutton the following dialog will appear
+
+.. image:: images/dialog.png
+
+.. index:: polygon layer
+
+Choose the layer that you want to use as the polygon layer and the field that defines the category. 
+
+.. index:: point layer
+
+Next choose the layer containing the species occurrence points and the field that contains the name of the species observed at that point.
+
+Click OK and you will see a table similar to the one below.  
+
+.. image:: images/results.png
+
+Note that you can expand each entry to see the raw data that was used to calculate each estimate of diversity.
+ 
 
 .. toctree::
    :maxdepth: 2
